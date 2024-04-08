@@ -1,4 +1,4 @@
-from skmultiflow.meta import AdaptiveRandomForestClassifier, AccuracyWeightedEnsembleClassifier
+from skmultiflow.meta import AdaptiveRandomForestClassifier
 from skmultiflow.trees import HoeffdingAdaptiveTreeClassifier, ExtremelyFastDecisionTreeClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from skmultiflow.drift_detection.adwin import ADWIN
@@ -7,7 +7,6 @@ from DataInput import *
 models = [
     AdaptiveRandomForestClassifier(drift_detection_method=ADWIN(delta=0.001)),
     HoeffdingAdaptiveTreeClassifier(),
-    AccuracyWeightedEnsembleClassifier(),
     ExtremelyFastDecisionTreeClassifier()
 ]
 
