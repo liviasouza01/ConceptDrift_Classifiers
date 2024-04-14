@@ -22,8 +22,8 @@ for model in models:
             model.reset()
 
     # Metrics
-    y_pred_test = model.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred_test)
+    y_pred_test = model.predict(X)
+    accuracy = accuracy_score(y, y_pred_test)
     precision = precision_score(y_test, y_pred_test)
     recall = recall_score(y_test, y_pred_test)
     f1 = f1_score(y_test, y_pred_test)
